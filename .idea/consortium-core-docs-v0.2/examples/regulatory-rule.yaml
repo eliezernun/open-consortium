@@ -1,0 +1,20 @@
+id: REG-EXAMPLE-001
+title: Exemplo de regra
+source:
+  norm: Lei 11.795/2008
+  provision: Artigo a confirmar
+effective:
+  from: 2009-02-06
+  until: null
+classification: MANDATORY
+interpretation: >
+  Texto da interpretação validada.
+parameters: []
+implementation:
+  module: group
+  policy: ExamplePolicy
+tests:
+  - CT-EXAMPLE-001
+validation:
+  status: PENDING_LEGAL
+  reviewedBy: null

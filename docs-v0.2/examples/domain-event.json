@@ -1,0 +1,21 @@
+{
+  "eventId": "0190-example",
+  "eventType": "QuotaContemplated",
+  "eventVersion": 1,
+  "aggregateType": "Quota",
+  "aggregateId": "0190-quota",
+  "aggregateVersion": 12,
+  "effectiveDate": "2026-07-13",
+  "occurredAt": "2026-07-14T01:00:00Z",
+  "ruleSetVersion": "2026.07.0",
+  "correlationId": "0190-correlation",
+  "data": {
+    "groupId": "0190-group",
+    "assemblyId": "0190-assembly",
+    "mode": "DRAW",
+    "creditAmount": {
+      "currency": "BRL",
+      "amount": "100000.00"
+    }
+  }
+}

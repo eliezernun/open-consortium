@@ -28,30 +28,30 @@ Esses sistemas se integram ao core por comandos, consultas e eventos.
 
 ## Documentos
 
-1. [Visão e princípios](docs-v0.2/docs/01-visao-e-principios.md)
-2. [Escopo e fronteiras](docs-v0.2/docs/02-escopo-e-fronteiras.md)
-3. [Base regulatória](docs-v0.2/docs/03-base-regulatoria.md)
-4. [Glossário do domínio](docs-v0.2/docs/04-glossario.md)
-5. [Modelo de domínio](docs-v0.2/docs/05-modelo-de-dominio.md)
-6. [Estados e transições](docs-v0.2/docs/06-estados-e-transicoes.md)
-7. [Regras de negócio](docs-v0.2/docs/07-regras-de-negocio.md)
-8. [Arquitetura](docs-v0.2/docs/08-arquitetura.md)
-9. [Modelo de dados](docs-v0.2/docs/09-modelo-de-dados.md)
-10. [API, comandos e eventos](docs-v0.2/docs/10-api-comandos-eventos.md)
-11. [Testes e qualidade](docs-v0.2/docs/11-testes-e-qualidade.md)
-12. [Segurança e auditoria](docs-v0.2/docs/12-seguranca-e-auditoria.md)
-13. [Roadmap](docs-v0.2/docs/13-roadmap.md)
-14. [Matriz de rastreabilidade](docs-v0.2/docs/14-matriz-rastreabilidade.md)
-15. [Questões em aberto](docs-v0.2/docs/15-questoes-em-aberto.md)
-16. [Licenciamento e governança](docs-v0.2/docs/16-licenciamento-e-governanca.md)
+1. [Visão e princípios](docs/01-visao-e-principios.md)
+2. [Escopo e fronteiras](docs/02-escopo-e-fronteiras.md)
+3. [Base regulatória](docs/03-base-regulatoria.md)
+4. [Glossário do domínio](docs/04-glossario.md)
+5. [Modelo de domínio](docs/05-modelo-de-dominio.md)
+6. [Estados e transições](docs/06-estados-e-transicoes.md)
+7. [Regras de negócio](docs/07-regras-de-negocio.md)
+8. [Arquitetura](docs/08-arquitetura.md)
+9. [Modelo de dados](docs/09-modelo-de-dados.md)
+10. [API, comandos e eventos](docs/10-api-comandos-eventos.md)
+11. [Testes e qualidade](docs/11-testes-e-qualidade.md)
+12. [Segurança e auditoria](docs/12-seguranca-e-auditoria.md)
+13. [Roadmap](docs/13-roadmap.md)
+14. [Matriz de rastreabilidade](docs/14-matriz-rastreabilidade.md)
+15. [Questões em aberto](docs/15-questoes-em-aberto.md)
+16. [Licenciamento e governança](docs/16-licenciamento-e-governanca.md)
 
 ## Decisões arquiteturais
 
-- [ADR-001 — Monólito modular](docs-v0.2/adr/ADR-001-monolito-modular.md)
-- [ADR-002 — Ledger imutável](docs-v0.2/adr/ADR-002-ledger-imutavel.md)
-- [ADR-003 — Regras versionadas](docs-v0.2/adr/ADR-003-regras-versionadas.md)
-- [ADR-004 — PostgreSQL como fonte transacional](docs-v0.2/adr/ADR-004-postgresql.md)
-- [ADR-005 — Licenciamento](docs-v0.2/adr/ADR-005-licenciamento.md)
+- [ADR-001 — Monólito modular](adr/ADR-001-monolito-modular.md)
+- [ADR-002 — Ledger imutável](adr/ADR-002-ledger-imutavel.md)
+- [ADR-003 — Regras versionadas](adr/ADR-003-regras-versionadas.md)
+- [ADR-004 — PostgreSQL como fonte transacional](adr/ADR-004-postgresql.md)
+- [ADR-005 — Licenciamento](adr/ADR-005-licenciamento.md)
 
 ## Fontes normativas principais
 
