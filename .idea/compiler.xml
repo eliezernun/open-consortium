@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="consortium-contribution" />
+        <module name="consortium-integration" />
+        <module name="consortium-shared-kernel" />
+        <module name="consortium-closure" />
+        <module name="consortium-product-catalog" />
+        <module name="consortium-group" />
+        <module name="consortium-bootstrap" />
+        <module name="consortium-quota" />
+        <module name="consortium-ledger" />
+        <module name="consortium-assembly" />
+        <module name="consortium-contemplation" />
+        <module name="consortium-regulation" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="consortium-assembly" options="-parameters" />
+      <module name="consortium-bootstrap" options="-parameters" />
+      <module name="consortium-closure" options="-parameters" />
+      <module name="consortium-contemplation" options="-parameters" />
+      <module name="consortium-contribution" options="-parameters" />
+      <module name="consortium-group" options="-parameters" />
+      <module name="consortium-integration" options="-parameters" />
+      <module name="consortium-ledger" options="-parameters" />
+      <module name="consortium-product-catalog" options="-parameters" />
+      <module name="consortium-quota" options="-parameters" />
+      <module name="consortium-regulation" options="-parameters" />
+      <module name="consortium-shared-kernel" options="-parameters" />
+    </option>
+  </component>
+</project>

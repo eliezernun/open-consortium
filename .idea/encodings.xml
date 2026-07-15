@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/consortium-assembly/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-assembly/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-bootstrap/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-bootstrap/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-closure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-closure/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-contemplation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-contemplation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-contribution/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-contribution/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-group/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-group/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-integration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-integration/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-ledger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-ledger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-product-catalog/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-product-catalog/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-quota/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-quota/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-regulation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-regulation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-shared-kernel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consortium-shared-kernel/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
