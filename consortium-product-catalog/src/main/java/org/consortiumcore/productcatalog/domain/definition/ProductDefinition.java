@@ -1,6 +1,6 @@
 package org.consortiumcore.productcatalog.domain.definition;
 
-import java.util.Objects;
+import org.consortiumcore.productcatalog.domain.error.Required;
 
 public record ProductDefinition(
         GroupDefinition group,
@@ -20,18 +20,18 @@ public record ProductDefinition(
 ) {
 
     public ProductDefinition {
-        Objects.requireNonNull(group);
-        Objects.requireNonNull(credit);
-        Objects.requireNonNull(duration);
-        Objects.requireNonNull(contribution);
-        Objects.requireNonNull(administrationFee);
-        Objects.requireNonNull(adjustment);
-        Objects.requireNonNull(assembly);
-        Objects.requireNonNull(draw);
-        Objects.requireNonNull(bid);
-        Objects.requireNonNull(exclusion);
-        Objects.requireNonNull(readmission);
-        Objects.requireNonNull(transfer);
-        Objects.requireNonNull(closure);
+        Required.notNull(group, "definition.group");
+        Required.notNull(credit, "definition.credit");
+        Required.notNull(duration, "definition.duration");
+        Required.notNull(contribution, "definition.contribution");
+        Required.notNull(administrationFee, "definition.administrationFee");
+        Required.notNull(adjustment, "definition.adjustment");
+        Required.notNull(assembly, "definition.assembly");
+        Required.notNull(draw, "definition.draw");
+        Required.notNull(bid, "definition.bid");
+        Required.notNull(exclusion, "definition.exclusion");
+        Required.notNull(readmission, "definition.readmission");
+        Required.notNull(transfer, "definition.transfer");
+        Required.notNull(closure, "definition.closure");
     }
 }

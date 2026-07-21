@@ -1,7 +1,7 @@
 package org.consortiumcore.productcatalog.domain.product;
 
 import java.util.Locale;
-import java.util.Objects;
+import org.consortiumcore.productcatalog.domain.error.Required;
 
 public record ProductTypeCode(String value) {
 
@@ -15,7 +15,7 @@ public record ProductTypeCode(String value) {
             new ProductTypeCode("SERVICES");
 
     public ProductTypeCode {
-        Objects.requireNonNull(value);
+        Required.notNull(value, "productTypeCode");
         value = value.trim().toUpperCase(Locale.ROOT);
     }
 }

@@ -1,5 +1,7 @@
 package org.consortiumcore.productcatalog.domain.definition;
 
+import org.consortiumcore.productcatalog.domain.exception.InvalidQuotaCapacityException;
+
 public record QuotaCapacityRange(
         int minimum,
         int maximum

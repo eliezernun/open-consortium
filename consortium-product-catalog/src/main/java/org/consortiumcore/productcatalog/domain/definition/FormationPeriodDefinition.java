@@ -1,6 +1,8 @@
 package org.consortiumcore.productcatalog.domain.definition;
 
-import java.util.Objects;
+import org.consortiumcore.productcatalog.domain.error.ProductCatalogError;
+import org.consortiumcore.productcatalog.domain.error.Required;
+import org.consortiumcore.productcatalog.domain.exception.ProductCatalogValidationException;
 import org.consortiumcore.productcatalog.domain.type.FormationFailureAction;
 
 public record FormationPeriodDefinition(
@@ -10,9 +12,9 @@ public record FormationPeriodDefinition(
 
     public FormationPeriodDefinition {
         if (maximumDays <= 0) {
-            throw new IllegalArgumentException();
+            throw new ProductCatalogValidationException(ProductCatalogError.INVALID_FORMATION_PERIOD);
         }
 
-        Objects.requireNonNull(failureAction);
+        Required.notNull(failureAction, "formationPeriod.failureAction");
     }
 }

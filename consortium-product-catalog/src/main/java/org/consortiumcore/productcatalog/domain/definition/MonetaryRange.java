@@ -1,6 +1,8 @@
 package org.consortiumcore.productcatalog.domain.definition;
 
-import java.util.Objects;
+import org.consortiumcore.productcatalog.domain.error.Required;
+import org.consortiumcore.productcatalog.domain.exception.CurrencyMismatchException;
+import org.consortiumcore.productcatalog.domain.exception.InvalidMonetaryRangeException;
 
 public record MonetaryRange(
         Money minimum,
@@ -8,8 +10,8 @@ public record MonetaryRange(
 ) {
 
     public MonetaryRange {
-        Objects.requireNonNull(minimum);
-        Objects.requireNonNull(maximum);
+        Required.notNull(minimum, "monetaryRange.minimum");
+        Required.notNull(maximum, "monetaryRange.maximum");
 
         if (!minimum.currency().equals(maximum.currency())) {
             throw new CurrencyMismatchException();

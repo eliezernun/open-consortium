@@ -1,14 +1,16 @@
 package org.consortiumcore.productcatalog.domain.version;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import org.consortiumcore.productcatalog.domain.definition.ProductDefinition;
+import org.consortiumcore.productcatalog.domain.error.Required;
+import org.consortiumcore.productcatalog.domain.event.DomainEvent;
+import org.consortiumcore.productcatalog.domain.event.ProductVersionPublished;
+import org.consortiumcore.productcatalog.domain.exception.PublishedProductVersionCannotBeModifiedException;
 import org.consortiumcore.productcatalog.domain.product.ProductId;
 import org.consortiumcore.productcatalog.domain.regulation.RegulationProfile;
-
-import org.consortiumcore.productcatalog.domain.version.ProductVersionStatus;
-
-import java.util.ArrayList;
+import org.consortiumcore.productcatalog.domain.service.ProductVersionValidator;
+import org.consortiumcore.productcatalog.domain.type.ProductType;
 
 public final class ProductVersion {
 
@@ -85,12 +87,50 @@ public final class ProductVersion {
 
     public void changeDefinition(ProductDefinition newDefinition) {
         ensureDraft();
-        this.definition = Objects.requireNonNull(newDefinition);
+        this.definition = Required.notNull(newDefinition, "definition");
     }
 
     private void ensureDraft() {
         if (status != ProductVersionStatus.DRAFT) {
             throw new PublishedProductVersionCannotBeModifiedException(id);
         }
+    }
+
+    public List<DomainEvent> pullDomainEvents() {
+        List<DomainEvent> events = List.copyOf(domainEvents);
+        domainEvents.clear();
+        return events;
+    }
+
+    public ProductVersionId id() {
+        return id;
+    }
+
+    public ProductId productId() {
+        return productId;
+    }
+
+    public VersionNumber versionNumber() {
+        return versionNumber;
+    }
+
+    public ProductVersionStatus status() {
+        return status;
+    }
+
+    public EffectivePeriod effectivePeriod() {
+        return effectivePeriod;
+    }
+
+    public ProductDefinition definition() {
+        return definition;
+    }
+
+    public RegulationProfile regulationProfile() {
+        return regulationProfile;
+    }
+
+    public ConfigurationHash configurationHash() {
+        return configurationHash;
     }
 }

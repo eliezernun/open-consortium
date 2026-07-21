@@ -1,7 +1,7 @@
 package org.consortiumcore.productcatalog.domain.type;
 
 /**
- * As finalidades definitivas devem ser alinhadas à matriz regulatória, não definidas apenas tecnicamente.
+ * Final purposes must be aligned with the regulatory matrix, not defined only technically.
  */
 public enum ReserveFundPurpose {
     COVER_DEFAULT,

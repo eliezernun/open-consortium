@@ -1,7 +1,8 @@
 package org.consortiumcore.productcatalog.domain.definition;
+
 /*
-    O catálogo não deve armazenar o valor do índice. Apenas a referência e a regra de aplicação.
-    Os valores históricos virão de integração externa.
+    The catalog stores only the index reference and application rule.
+    Historical values are supplied by external integration.
  */
 public record ReferenceIndexCode(String value) {
 

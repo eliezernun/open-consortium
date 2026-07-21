@@ -2,11 +2,15 @@ package org.consortiumcore.productcatalog.domain.product;
 
 import java.util.Objects;
 import java.util.UUID;
+import org.consortiumcore.productcatalog.domain.error.ProductCatalogError;
+import org.consortiumcore.productcatalog.domain.exception.ProductCatalogValidationException;
 
 public record ProductId(UUID value) {
 
     public ProductId {
-        Objects.requireNonNull(value, "ProductId não pode ser nulo.");
+        if (value == null) {
+            throw new ProductCatalogValidationException(ProductCatalogError.REQUIRED_VALUE, "productId");
+        }
     }
 
     public static ProductId generate() {

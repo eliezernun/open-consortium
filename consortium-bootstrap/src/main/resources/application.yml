@@ -16,3 +16,22 @@ info:
   application:
     name: Consortium Core
     version: 0.1.0-SNAPSHOT
+
+otel:
+  service:
+    name: ${spring.application.name}
+  exporter:
+    otlp:
+      endpoint: ${OTEL_EXPORTER_OTLP_ENDPOINT:http://localhost:4317}
+      protocol: ${OTEL_EXPORTER_OTLP_PROTOCOL:grpc}
+  logs:
+    exporter: ${OTEL_LOGS_EXPORTER:otlp}
+  traces:
+    exporter: ${OTEL_TRACES_EXPORTER:otlp}
+  metrics:
+    exporter: ${OTEL_METRICS_EXPORTER:otlp}
+  instrumentation:
+    logback-appender:
+      enabled: true
+    logback-mdc:
+      enabled: true

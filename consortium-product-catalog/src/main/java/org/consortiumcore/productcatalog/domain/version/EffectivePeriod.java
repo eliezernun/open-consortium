@@ -1,7 +1,8 @@
 package org.consortiumcore.productcatalog.domain.version;
 
 import java.time.LocalDate;
-import java.util.Objects;
+import org.consortiumcore.productcatalog.domain.exception.InvalidEffectivePeriodException;
+import org.consortiumcore.productcatalog.domain.error.Required;
 
 public record EffectivePeriod(
         LocalDate from,
@@ -9,7 +10,7 @@ public record EffectivePeriod(
 ) {
 
     public EffectivePeriod {
-        Objects.requireNonNull(from);
+        Required.notNull(from, "effectivePeriod.from");
 
         if (until != null && until.isBefore(from)) {
             throw new InvalidEffectivePeriodException(from, until);
@@ -17,7 +18,7 @@ public record EffectivePeriod(
     }
 
     public boolean includes(LocalDate date) {
-        Objects.requireNonNull(date);
+        Required.notNull(date, "date");
 
         boolean afterStart =
                 date.isEqual(from) || date.isAfter(from);

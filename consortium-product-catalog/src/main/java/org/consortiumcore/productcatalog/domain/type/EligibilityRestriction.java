@@ -1,7 +1,8 @@
 package org.consortiumcore.productcatalog.domain.type;
+
 /*
-    No catálogo, isso é definição.
-    A avaliação real pertence ao módulo de assembleia.
+    In the catalog this is only a definition.
+    The actual evaluation belongs to the assembly module.
  */
 public enum EligibilityRestriction {
     EXCLUDED_QUOTA,

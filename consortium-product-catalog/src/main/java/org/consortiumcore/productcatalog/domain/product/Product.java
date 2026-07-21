@@ -1,7 +1,7 @@
 package org.consortiumcore.productcatalog.domain.product;
 
-
-import org.consortiumcore.productcatalog.domain.product.ProductStatus;
+import org.consortiumcore.productcatalog.domain.exception.InvalidProductStatusTransitionException;
+import org.consortiumcore.productcatalog.domain.exception.ProductAlreadyRetiredException;
 
 public final class Product {
 
@@ -65,5 +65,25 @@ public final class Product {
 
     public boolean canReceiveNewVersion() {
         return status != ProductStatus.RETIRED;
+    }
+
+    public ProductId id() {
+        return id;
+    }
+
+    public ProductCode code() {
+        return code;
+    }
+
+    public ProductName name() {
+        return name;
+    }
+
+    public ProductTypeCode type() {
+        return type;
+    }
+
+    public ProductStatus status() {
+        return status;
     }
 }
