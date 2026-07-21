@@ -32,6 +32,6 @@ otel:
     exporter: ${OTEL_METRICS_EXPORTER:otlp}
   instrumentation:
     logback-appender:
-      enabled: true
+      enabled: false
     logback-mdc:
-      enabled: true
+      enabled: false
