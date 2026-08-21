@@ -12,20 +12,15 @@
     </parent>
 
     <artifactId>consortium-product-catalog</artifactId>
+    <packaging>pom</packaging>
     <name>consortium-product-catalog</name>
     <description>Definições e versões de produtos de consórcio.</description>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>consortium-shared-kernel</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>consortium-regulation</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>product-catalog-api</module>
+        <module>product-catalog-domain</module>
+        <module>product-catalog-application</module>
+        <module>product-catalog-infrastructure</module>
+    </modules>
 
 </project>

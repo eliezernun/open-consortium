@@ -28,7 +28,7 @@
         </dependency>
         <dependency>
             <groupId>org.consortiumcore</groupId>
-            <artifactId>consortium-product-catalog</artifactId>
+            <artifactId>product-catalog-infrastructure</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
