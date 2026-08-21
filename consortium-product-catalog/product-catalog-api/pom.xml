@@ -7,13 +7,13 @@
 
     <parent>
         <groupId>org.consortiumcore</groupId>
-        <artifactId>consortium-core</artifactId>
+        <artifactId>consortium-product-catalog</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>consortium-group</artifactId>
-    <name>consortium-group</name>
-    <description>Constituição, formação, configuração e ciclo de vida dos grupos.</description>
+    <artifactId>product-catalog-api</artifactId>
+    <name>product-catalog-api</name>
+    <description>Public Java API for the Product Catalog bounded context.</description>
 
     <dependencies>
         <dependency>
@@ -21,16 +21,5 @@
             <artifactId>consortium-shared-kernel</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>consortium-regulation</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>product-catalog-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
-
 </project>
