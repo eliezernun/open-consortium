@@ -97,6 +97,18 @@ class ProductCatalogDomainTest {
     }
 
     @Test
+    void detectsEffectivePeriodOverlap() {
+        EffectivePeriod first = new EffectivePeriod(LocalDate.parse("2026-01-01"), LocalDate.parse("2026-06-30"));
+        EffectivePeriod adjacentBoundary = new EffectivePeriod(LocalDate.parse("2026-06-30"), LocalDate.parse("2026-12-31"));
+        EffectivePeriod afterBoundary = new EffectivePeriod(LocalDate.parse("2026-07-01"), LocalDate.parse("2026-12-31"));
+        EffectivePeriod openEnded = new EffectivePeriod(LocalDate.parse("2026-07-01"), null);
+
+        assertEquals(true, first.overlaps(adjacentBoundary));
+        assertEquals(false, first.overlaps(afterBoundary));
+        assertEquals(true, openEnded.overlaps(afterBoundary));
+    }
+
+    @Test
     void validatesDefinitionRanges() {
         assertThrows(ProductCatalogValidationException.class, () -> new Money(new BigDecimal("-1"), Currency.getInstance("BRL")));
         assertThrows(RuntimeException.class, () -> new MonthRange(12, 6));
@@ -133,6 +145,15 @@ class ProductCatalogDomainTest {
 
         assertEquals(ProductVersionStatus.PUBLISHED, version.status());
         assertThrows(PublishedProductVersionCannotBeModifiedException.class, () -> version.changeDefinition(definition()));
+        assertThrows(
+                PublishedProductVersionCannotBeModifiedException.class,
+                () -> version.publish(
+                        new EffectivePeriod(LocalDate.parse("2027-01-01"), null),
+                        new ConfigurationHash("other-hash"),
+                        new MovableGoodsProductType(),
+                        new ProductVersionValidator()
+                )
+        );
 
         version.suspend();
         assertEquals(ProductVersionStatus.SUSPENDED, version.status());

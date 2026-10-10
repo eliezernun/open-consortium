@@ -7,13 +7,13 @@
 
     <parent>
         <groupId>org.consortiumcore</groupId>
-        <artifactId>consortium-core</artifactId>
+        <artifactId>consortium-group</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>consortium-quota</artifactId>
-    <name>consortium-quota</name>
-    <description>Ciclo de vida das cotas e titularidade referencial.</description>
+    <artifactId>group-domain</artifactId>
+    <name>group-domain</name>
+    <description>Domain model for the Group bounded context.</description>
 
     <dependencies>
         <dependency>
@@ -23,14 +23,13 @@
         </dependency>
         <dependency>
             <groupId>org.consortiumcore</groupId>
-            <artifactId>consortium-regulation</artifactId>
+            <artifactId>product-catalog-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>group-api</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
-
 </project>

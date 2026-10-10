@@ -12,25 +12,15 @@
     </parent>
 
     <artifactId>consortium-group</artifactId>
+    <packaging>pom</packaging>
     <name>consortium-group</name>
     <description>Constituição, formação, configuração e ciclo de vida dos grupos.</description>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>consortium-shared-kernel</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>consortium-regulation</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>product-catalog-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>group-api</module>
+        <module>group-domain</module>
+        <module>group-application</module>
+        <module>group-infrastructure</module>
+    </modules>
 
 </project>

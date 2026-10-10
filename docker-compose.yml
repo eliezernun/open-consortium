@@ -1,0 +1,21 @@
+services:
+  consortium-core:
+    build:
+      context: .
+      target: runtime
+    image: open-consortium:local
+    environment:
+      SERVER_PORT: 8080
+      OTEL_LOGS_EXPORTER: none
+      OTEL_TRACES_EXPORTER: none
+      OTEL_METRICS_EXPORTER: none
+    ports:
+      - "8080:8080"
+
+  tests:
+    build:
+      context: .
+      target: test
+    image: open-consortium:test
+    profiles:
+      - test

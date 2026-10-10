@@ -27,13 +27,33 @@ public final class ProductCatalogConfiguration {
     }
 
     public static ProductCatalog inMemoryCatalog() {
-        return catalog(
-                new InMemoryProductRepository(),
-                new InMemoryProductVersionRepository(),
-                new RegistryProductTypeProvider(),
-                new FixedRegulationProfileProvider(),
-                new StableConfigurationHashGenerator(),
-                new NoOpDomainEventPublisher()
+        return inMemoryRuntime().catalog();
+    }
+
+    public static ProductCatalogRuntime inMemoryRuntime() {
+        ProductRepository productRepository = new InMemoryProductRepository();
+        ProductVersionRepository productVersionRepository = new InMemoryProductVersionRepository();
+        ProductTypeProvider productTypeProvider = new RegistryProductTypeProvider();
+        RegulationProfileProvider regulationProfileProvider = new FixedRegulationProfileProvider();
+        ConfigurationHashGenerator configurationHashGenerator = new StableConfigurationHashGenerator();
+        DomainEventPublisher eventPublisher = new NoOpDomainEventPublisher();
+        return new ProductCatalogRuntime(
+                catalog(
+                        productRepository,
+                        productVersionRepository,
+                        productTypeProvider,
+                        regulationProfileProvider,
+                        configurationHashGenerator,
+                        eventPublisher
+                ),
+                useCases(
+                        productRepository,
+                        productVersionRepository,
+                        productTypeProvider,
+                        regulationProfileProvider,
+                        configurationHashGenerator,
+                        eventPublisher
+                )
         );
     }
 
@@ -45,7 +65,6 @@ public final class ProductCatalogConfiguration {
             ConfigurationHashGenerator configurationHashGenerator,
             DomainEventPublisher eventPublisher
     ) {
-        ProductVersionValidator validator = new ProductVersionValidator();
         return new ProductCatalogAdapter(
                 new ObtainPublishedProductVersionService(productRepository, productVersionRepository)
         );

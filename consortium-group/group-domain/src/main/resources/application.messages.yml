@@ -1,0 +1,5 @@
+group.required-value: "Required value is missing: {0}"
+group.invalid-code: "Invalid group code: {0}"
+group.invalid-capacity: "Invalid group capacity."
+group.invalid-duration: "Invalid group duration."
+group.invalid-credit-configuration: "Invalid group credit configuration."

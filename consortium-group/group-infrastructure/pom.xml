@@ -7,30 +7,29 @@
 
     <parent>
         <groupId>org.consortiumcore</groupId>
-        <artifactId>consortium-core</artifactId>
+        <artifactId>consortium-group</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>consortium-quota</artifactId>
-    <name>consortium-quota</name>
-    <description>Ciclo de vida das cotas e titularidade referencial.</description>
+    <artifactId>group-infrastructure</artifactId>
+    <name>group-infrastructure</name>
+    <description>Infrastructure adapters for the Group bounded context.</description>
 
     <dependencies>
-        <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>consortium-shared-kernel</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.consortiumcore</groupId>
-            <artifactId>consortium-regulation</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.consortiumcore</groupId>
             <artifactId>group-api</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.consortiumcore</groupId>
+            <artifactId>group-domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.consortiumcore</groupId>
+            <artifactId>group-application</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
-
 </project>
